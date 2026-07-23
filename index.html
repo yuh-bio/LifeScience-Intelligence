@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>LifeScience Intelligence Terminal 4.0</title>
+<style>
+body{margin:0;background:#050d18;color:#eaf4ff;font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei"}
+header{padding:55px;text-align:center;background:linear-gradient(135deg,#032b45,#087f8c)}
+h1{font-size:42px}
+.container{width:94%;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.panel,.card{background:#0e2033;border:1px solid #24445d;border-radius:20px;padding:25px;margin:25px 0}
+.card{cursor:pointer;transition:.3s}
+.card:hover{transform:translateY(-5px)}
+h2{color:#5de0d0}
+.detail{display:none;background:#071521;padding:15px;border-radius:12px;line-height:1.8;margin-top:15px}
+.active .detail{display:block}
+.metric{font-size:28px;color:#5de0d0}
+.barbg{height:12px;background:#22364a;border-radius:20px}
+.bar{height:12px;background:#21d4c3;border-radius:20px}
+.tag{padding:5px 12px;background:#123b4b;border-radius:20px}
+table{width:100%;border-collapse:collapse}
+td,th{padding:12px;border-bottom:1px solid #345}
+input{padding:12px;width:70%;border-radius:20px;border:0}
+button{padding:12px 25px;border-radius:20px;border:0;background:#21d4c3}
+footer{text-align:center;padding:30px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🧬 LifeScience Intelligence Terminal 4.0</h1>
+<p>Nature Research × Bloomberg Healthcare × AI Biomedical Intelligence</p>
+<p>全球生命科学研究、药物、临床试验、技术趋势分析平台</p>
+</header>
+
+<div class="container">
+
+<div class="grid">
+<div class="panel">
+<h2>全球生命科学指数 LIS-100</h2>
+<p class="metric">92.8</p>
+<p>细胞治疗 ▲24%</p><div class="barbg"><div class="bar" style="width:92%"></div></div>
+<p>AI药物研发 ▲18%</p><div class="barbg"><div class="bar" style="width:86%"></div></div>
+<p>再生医学 ▲28%</p><div class="barbg"><div class="bar" style="width:95%"></div></div>
+</div>
+
+<div class="panel">
+<h2>实时科研监控</h2>
+<p>今日新增论文：1842</p>
+<p>临床试验更新：126</p>
+<p>重点研究机构：520+</p>
+</div>
+</div>
+
+
+<h1>🔬 六大生命科学数据库中心</h1>
+
+<div class="grid">
+
+<div class="card">
+<h2>🫀 脂肪肝 MASLD/MASH</h2>
+<span class="tag">Metabolic Liver</span>
+<div class="detail">
+<b>研究方向</b><br>
+GLP-1/GIP药物<br>
+抗纤维化治疗<br>
+AI肝脏影像<br>
+肝细胞再生<br><br>
+<b>数据库</b><br>
+论文 | 药物 | 临床试验 | 企业研发
+</div>
+</div>
+
+<div class="card">
+<h2>🩸 糖尿病 Intelligence Center</h2>
+<div class="detail">
+干细胞胰岛替代<br>
+β细胞再生<br>
+智能胰岛素系统<br>
+基因治疗路线<br><br>
+临床阶段追踪：Phase I-IV
+</div>
+</div>
+
+<div class="card">
+<h2>🧬 脂肪与代谢科学</h2>
+<div class="detail">
+脂肪细胞重编程<br>
+棕色脂肪激活<br>
+肥胖机制<br>
+代谢网络分析
+</div>
+</div>
+
+<div class="card">
+<h2>🦠 肠道疾病</h2>
+<div class="detail">
+肠道菌群<br>
+炎症性肠病<br>
+微生态药物<br>
+精准营养
+</div>
+</div>
+
+<div class="card">
+<h2>👶 辅助生殖</h2>
+<div class="detail">
+AI胚胎评分<br>
+IVF优化<br>
+生殖细胞工程<br>
+卵巢功能恢复研究
+</div>
+</div>
+
+<div class="card">
+<h2>🌱 干细胞与再生医学</h2>
+<div class="detail">
+iPSC<br>
+Organoid类器官<br>
+细胞治疗<br>
+组织工程
+</div>
+</div>
+
+</div>
+
+
+<div class="panel">
+<h2>📚 Nature / Cell Research Tracker</h2>
+<table>
+<tr><th>期刊</th><th>研究</th><th>状态</th></tr>
+<tr><td>Nature Medicine</td><td>AI精准医疗</td><td>热点</td></tr>
+<tr><td>Cell</td><td>干细胞治疗</td><td>临床转化</td></tr>
+<tr><td>Science Translational Medicine</td><td>再生医学</td><td>快速增长</td></tr>
+</table>
+</div>
+
+
+<div class="panel">
+<h2>💊 Drug Pipeline Radar</h2>
+<p>MASH药物研发</p>
+<div class="barbg"><div class="bar" style="width:80%"></div></div>
+<p>细胞治疗</p>
+<div class="barbg"><div class="bar" style="width:90%"></div></div>
+<p>AI药物发现</p>
+<div class="barbg"><div class="bar" style="width:88%"></div></div>
+</div>
+
+
+<div class="panel">
+<h2>🏥 Clinical Trial Radar</h2>
+<p>糖尿病干细胞治疗：Phase II</p>
+<p>MASH新药：Phase III</p>
+<p>再生医学：Early Clinical</p>
+</div>
+
+
+<div class="panel">
+<h2>🌎 全球科研网络</h2>
+<p>🇺🇸 Harvard · MIT · Stanford</p>
+<p>🇬🇧 Oxford · Cambridge</p>
+<p>🇨🇳 CAS · Tsinghua</p>
+<p>🇯🇵 Tokyo University</p>
+</div>
+
+
+<div class="panel">
+<h2>🤖 AI Biomedical Analyst</h2>
+<input placeholder="输入疾病，例如：糖尿病">
+<button onclick="alert('AI分析接口预留：未来连接PubMed、ClinicalTrials、FDA数据库')">分析</button>
+<p>输出：论文趋势、技术路线、临床阶段、未来预测</p>
+</div>
+
+
+</div>
+
+<footer>
+LifeScience Intelligence Terminal 4.0 © 2026
+</footer>
+
+<script>
+document.querySelectorAll('.card').forEach(x=>{
+x.onclick=()=>x.classList.toggle('active')
+})
+</script>
+
+</body>
+</html>
