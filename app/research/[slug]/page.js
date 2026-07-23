@@ -75,50 +75,107 @@ return (
 </h2>
 
 
-<div className="card">
+<div className="grid">
+
+{research.papers?.map((paper,index)=>(
+
+<div className="card" key={index}>
+
+<h3>
+{paper.title}
+</h3>
 
 <p>
-Future research intelligence module.
+年份：{paper.year}
 </p>
 
 <p>
-论文摘要、研究总结将在这里展示。
+{paper.summary}
 </p>
 
+</div>
+
+))}
 
 </div>
 
 
 </section>
-
-
 
 <section>
 
 <h2>
-专家与研究机构
+专家与科学家
 </h2>
 
 
-<div className="card">
+<div className="grid">
+
+{research.experts?.map((expert,index)=>(
+
+<div className="card" key={index}>
+
+<h3>
+{expert.name}
+</h3>
 
 <p>
-专家数据库模块
+研究方向：
+{expert.field}
 </p>
-
-<p>
-大学、医院、研究所信息模块
-</p>
-
 
 </div>
 
+))}
+
+</div>
 
 </section>
+<section>
+
+<h2>
+代表机构
+</h2>
 
 
-</main>
+<div className="grid">
 
-)
+{research.institutions?.map((institution,index)=>(
 
-}
+<div className="card" key={index}>
+
+<h3>
+{institution}
+</h3>
+
+</div>
+
+))}
+
+</div>
+
+</section>
+<section>
+
+<h2>
+技术应用案例
+</h2>
+
+
+<div className="grid">
+
+{research.applications?.map((app,index)=>(
+
+<div className="card" key={index}>
+
+<p>
+{app}
+</p>
+
+</div>
+
+))}
+
+</div>
+
+</section>
