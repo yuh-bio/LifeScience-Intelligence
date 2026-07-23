@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { researchCenters } from "../data/research";
 
 
@@ -35,31 +36,31 @@ export default function Home() {
 
         {researchCenters.map((item,index)=>(
 
-          <div className="card" key={index}>
+         <Link
+  href={`/research/${item.slug}`}
+  key={index}
+>
 
-            <h3>
-              {item.title}
-            </h3>
+  <div className="card">
 
-            <p>
-              {item.subtitle}
-            </p>
-
-
-            <ul>
-
-            {item.topics.map((topic,i)=>(
-
-              <li key={i}>
-                {topic}
-              </li>
-
-            ))}
-
-            </ul>
+    <h3>
+      {item.title}
+    </h3>
 
 
-          </div>
+    <p>
+      {item.subtitle}
+    </p>
+
+
+    <p>
+      {item.description}
+    </p>
+
+
+  </div>
+
+</Link>
 
 
         ))}
