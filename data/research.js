@@ -46,12 +46,79 @@ title:"干细胞与再生医学",
 subtitle:"Stem Cell & Regenerative Medicine",
 
 description:
-"研究细胞治疗、组织修复和再生医学技术。",
+"研究细胞治疗、组织修复和再生医学技术，是未来精准医疗的重要方向。",
+
 
 topics:[
 "Stem Cell Therapy",
-"Regeneration",
+"Regenerative Medicine",
 "Cell Therapy"
+],
+
+
+papers:[
+
+{
+title:
+"Induced pluripotent stem cells for regenerative medicine",
+
+year:"2007",
+
+summary:
+"该研究建立诱导多能干细胞技术，为细胞治疗和再生医学发展奠定基础。"
+
+},
+
+{
+title:
+"Stem cell-based tissue regeneration",
+
+year:"2023",
+
+summary:
+"探索利用干细胞促进组织修复的新策略。"
+
+}
+
+],
+
+
+experts:[
+
+{
+name:"Shinya Yamanaka",
+
+field:"iPSC and regenerative medicine"
+},
+
+{
+name:"Stem Cell Research Expert",
+
+field:"Cell therapy"
+}
+
+],
+
+
+institutions:[
+
+"Kyoto University",
+
+"Harvard Stem Cell Institute",
+
+"Mayo Clinic"
+
+],
+
+
+applications:[
+
+"组织损伤修复",
+
+"细胞治疗",
+
+"再生医学产品开发"
+
 ]
 
 },
