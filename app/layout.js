@@ -1,22 +1,44 @@
 import "./globals.css";
 
+import Navbar from "../components/Navbar";
+
+
+
 export const metadata = {
-  title: "LifeScience Intelligence",
-  description:
-    "生命科学智能平台 | Biomedical Intelligence Platform"
+
+title:
+"LifeScience Intelligence",
+
+description:
+"Biomedical Knowledge Intelligence Platform"
+
 };
 
-export default function RootLayout({ children }) {
 
-  return (
-    <html lang="zh-CN">
 
-      <body>
+export default function RootLayout({children}){
 
-        {children}
 
-      </body>
+return (
 
-    </html>
-  );
+<html lang="zh-CN">
+
+
+<body>
+
+
+<Navbar />
+
+
+{children}
+
+
+</body>
+
+
+</html>
+
+
+)
+
 }
