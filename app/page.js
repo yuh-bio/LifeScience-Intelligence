@@ -5,319 +5,392 @@ import { researchCenters } from "../data/research";
 import { latestResearch } from "../data/latestResearch";
 
 
-export default function Home() {
 
+const technologies = [
 
-  return (
+{
+slug:"gene-editing",
+title:"🧬 Gene Editing",
+description:
+"基因编辑技术，包括CRISPR、Base Editing和Prime Editing。"
+},
 
-    <main className="container">
 
+{
+slug:"organoid-organ-chip",
+title:"🧫 Organoid & Organ Chip",
+description:
+"类器官与器官芯片，用于疾病模型和药物研发。"
+},
 
-      {/* Hero */}
 
-      <section className="header">
+{
+slug:"single-cell-sequencing",
+title:"🔬 Single-cell Sequencing",
+description:
+"单细胞测序和空间组学解析生命复杂性。"
+},
 
-        <h1>
-          LifeScience Intelligence
-        </h1>
 
+{
+slug:"ai-drug-discovery",
+title:"🤖 AI Drug Discovery",
+description:
+"人工智能驱动药物发现和精准医疗。"
+}
 
-        <p>
-          生命科学智能平台 |
-          Biomedical Knowledge Intelligence Platform
-        </p>
 
+];
 
-        <p>
-          探索生命科学前沿技术、研究突破、
-          专家与机构网络
-        </p>
 
 
-      </section>
+export default function Home(){
 
 
+return (
 
-      {/* Research Centers */}
 
-      <section>
+<main className="container">
 
 
-        <h2>
-          六大生命科学中心
-        </h2>
 
+{/* Hero */}
 
-        <div className="grid">
+<section className="header">
 
 
-        {
-        researchCenters.map((item,index)=>(
+<h1>
 
+LifeScience Intelligence
 
-          <Link
+</h1>
 
-            href={`/research/${item.slug}`}
 
-            key={index}
+<p>
 
-          >
+生命科学智能平台
 
+</p>
 
-            <div className="card">
 
+<p>
 
-              <h3>
+Biomedical Knowledge Intelligence Platform
 
-                {item.title}
+</p>
 
-              </h3>
 
+</section>
 
-              <p>
 
-                {item.subtitle}
 
-              </p>
 
 
-              <p>
+{/* Research Centers */}
 
-                {item.description}
 
-              </p>
+<section>
 
 
-            </div>
+<h2>
 
+六大生命科学中心
 
-          </Link>
+</h2>
 
 
-        ))
+<div className="grid">
 
-        }
 
+{
 
-        </div>
+researchCenters.map((item,index)=>(
 
 
-      </section>
+<Link
 
+href={`/research/${item.slug}`}
 
+key={index}
 
+>
 
 
-      {/* Technology Radar */}
+<div className="card">
 
 
-      <section>
+<h3>
 
+{item.title}
 
-        <h2>
+</h3>
 
-          Technology Radar
 
-        </h2>
+<p>
 
+{item.subtitle}
 
-        <div className="grid">
+</p>
 
 
-          <div className="card">
+<p>
 
-            <h3>
-              🧬 Gene Editing
-            </h3>
+{item.description}
 
-            <p>
-              基因编辑技术原理、
-              临床应用与未来发展。
-            </p>
+</p>
 
-          </div>
 
+</div>
 
 
-          <div className="card">
+</Link>
 
-            <h3>
-              🧫 Organoid & Organ Chip
-            </h3>
 
-            <p>
-              类器官和器官芯片技术，
-              用于疾病模型和药物筛选。
-            </p>
+))
 
-          </div>
 
+}
 
 
-          <div className="card">
 
-            <h3>
-              🔬 Single-cell Sequencing
-            </h3>
+</div>
 
-            <p>
-              单细胞测序解析细胞异质性。
-            </p>
 
-          </div>
+</section>
 
 
 
-          <div className="card">
 
-            <h3>
-              🤖 AI Drug Discovery
-            </h3>
 
-            <p>
-              AI驱动药物发现和分子设计。
-            </p>
 
-          </div>
 
+{/* Technology Radar */}
 
-        </div>
 
 
-      </section>
+<section>
 
 
+<h2>
 
+Technology Radar
 
+</h2>
 
-      {/* Latest Research */}
 
 
-      <section>
+<div className="grid">
 
 
-        <h2>
+{
 
-          Latest Research Intelligence
 
-        </h2>
+technologies.map((item,index)=>(
 
 
-        <div className="grid">
+<Link
 
+href={`/technology/${item.slug}`}
 
-        {
+key={index}
 
-        latestResearch.map((item,index)=>(
+>
 
 
-          <div
+<div className="card">
 
-          className="card"
 
-          key={index}
+<h3>
 
-          >
+{item.title}
 
+</h3>
 
-            <h3>
 
-              {item.title}
+<p>
 
-            </h3>
+{item.description}
 
+</p>
 
-            <p>
 
-              领域：
-              {item.field}
+</div>
 
-            </p>
 
+</Link>
 
-            <p>
 
-              年份：
-              {item.year}
+))
 
-            </p>
 
+}
 
-            <p>
 
-              {item.summary}
+</div>
 
-            </p>
 
 
-            <small>
+</section>
 
-              来源：
-              {item.source}
 
-            </small>
 
 
-          </div>
 
 
-        ))
 
-        }
+{/* Latest Research */}
 
 
-        </div>
 
+<section>
 
-      </section>
 
+<h2>
 
+Latest Research Intelligence
 
+</h2>
 
 
-      {/* AI Analyst */}
 
+<div className="grid">
 
-      <section>
 
+{
 
-        <h2>
 
-          AI Biomedical Analyst
+latestResearch.map((item,index)=>(
 
-        </h2>
 
+<div
 
-        <div className="card">
+className="card"
 
+key={index}
 
-          <h3>
+>
 
-            AI生命科学分析助手
 
-          </h3>
+<h3>
 
+{item.title}
 
-          <p>
+</h3>
 
-            输入疾病、技术或研究方向，
-            AI帮助整理论文、
-            专家、机构和研究趋势。
 
-          </p>
+<p>
 
+领域：
 
-        </div>
+{item.field}
 
+</p>
 
-      </section>
 
 
+<p>
 
+年份：
 
-    </main>
+{item.year}
 
-  );
+</p>
+
+
+
+<p>
+
+{item.summary}
+
+</p>
+
+
+
+<p>
+
+来源：
+
+{item.source}
+
+</p>
+
+
+
+</div>
+
+
+))
+
+
+}
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+{/* AI Analyst */}
+
+
+
+<section>
+
+
+<h2>
+
+AI Biomedical Analyst
+
+</h2>
+
+
+
+<Link href="/ai-analyst">
+
+
+<div className="card">
+
+
+<h3>
+
+AI生命科学分析助手
+
+</h3>
+
+
+<p>
+
+输入疾病、技术或研究方向，
+
+AI帮助分析论文、专家、
+
+机构和未来趋势。
+
+</p>
+
+
+</div>
+
+
+</Link>
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+)
 
 
 }
