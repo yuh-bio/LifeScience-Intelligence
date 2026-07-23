@@ -5,40 +5,31 @@ import { researchCenters } from "../data/research";
 import { latestResearch } from "../data/latestResearch";
 
 
-
-const technologies = [
+const technologies=[
 
 {
 slug:"gene-editing",
 title:"🧬 Gene Editing",
-description:
-"基因编辑技术，包括CRISPR、Base Editing和Prime Editing。"
+desc:"CRISPR、Base Editing、Prime Editing等精准基因工程技术"
 },
-
 
 {
 slug:"organoid-organ-chip",
 title:"🧫 Organoid & Organ Chip",
-description:
-"类器官与器官芯片，用于疾病模型和药物研发。"
+desc:"人体疾病模型和药物筛选的新一代平台"
 },
-
 
 {
 slug:"single-cell-sequencing",
 title:"🔬 Single-cell Sequencing",
-description:
-"单细胞测序和空间组学解析生命复杂性。"
+desc:"解析细胞异质性的单细胞和空间组学技术"
 },
-
 
 {
 slug:"ai-drug-discovery",
 title:"🤖 AI Drug Discovery",
-description:
-"人工智能驱动药物发现和精准医疗。"
+desc:"人工智能驱动的新药发现和设计"
 }
-
 
 ];
 
@@ -49,12 +40,12 @@ export default function Home(){
 
 return (
 
-
 <main className="container">
 
 
 
 {/* Hero */}
+
 
 <section className="header">
 
@@ -66,16 +57,18 @@ LifeScience Intelligence
 </h1>
 
 
-<p>
-
-生命科学智能平台
-
-</p>
-
-
-<p>
+<h2>
 
 Biomedical Knowledge Intelligence Platform
+
+</h2>
+
+
+<p>
+
+连接生命科学研究、
+人工智能、
+专家网络与全球创新机构。
 
 </p>
 
@@ -86,7 +79,84 @@ Biomedical Knowledge Intelligence Platform
 
 
 
-{/* Research Centers */}
+
+{/* Metrics */}
+
+
+<section>
+
+
+<div className="grid">
+
+
+<div className="card">
+
+<h2>
+10,000+
+</h2>
+
+<p>
+Scientific Papers
+</p>
+
+</div>
+
+
+
+<div className="card">
+
+<h2>
+500+
+</h2>
+
+<p>
+Global Experts
+</p>
+
+</div>
+
+
+
+<div className="card">
+
+<h2>
+100+
+</h2>
+
+<p>
+Research Institutions
+</p>
+
+</div>
+
+
+
+<div className="card">
+
+<h2>
+6
+</h2>
+
+<p>
+Life Science Domains
+</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+{/* Research Domains */}
+
 
 
 <section>
@@ -152,7 +222,6 @@ key={index}
 }
 
 
-
 </div>
 
 
@@ -178,12 +247,10 @@ Technology Radar
 </h2>
 
 
-
 <div className="grid">
 
 
 {
-
 
 technologies.map((item,index)=>(
 
@@ -209,7 +276,7 @@ key={index}
 
 <p>
 
-{item.description}
+{item.desc}
 
 </p>
 
@@ -229,7 +296,6 @@ key={index}
 </div>
 
 
-
 </section>
 
 
@@ -238,7 +304,7 @@ key={index}
 
 
 
-{/* Latest Research */}
+{/* Research Intelligence */}
 
 
 
@@ -257,7 +323,6 @@ Latest Research Intelligence
 
 
 {
-
 
 latestResearch.map((item,index)=>(
 
@@ -280,30 +345,9 @@ key={index}
 
 <p>
 
-领域：
-
-{item.field}
-
-</p>
-
-
-
-<p>
-
-年份：
-
-{item.year}
-
-</p>
-
-
-
-<p>
-
 {item.summary}
 
 </p>
-
 
 
 <p>
@@ -313,7 +357,6 @@ key={index}
 {item.source}
 
 </p>
-
 
 
 </div>
@@ -336,11 +379,17 @@ key={index}
 
 
 
-{/* AI Analyst */}
+{/* AI */}
 
 
 
 <section>
+
+
+<Link href="/ai-analyst">
+
+
+<div className="card">
 
 
 <h2>
@@ -350,27 +399,17 @@ AI Biomedical Analyst
 </h2>
 
 
-
-<Link href="/ai-analyst">
-
-
-<div className="card">
-
-
-<h3>
-
-AI生命科学分析助手
-
-</h3>
-
-
 <p>
 
-输入疾病、技术或研究方向，
+输入疾病、
+技术或研究方向，
 
-AI帮助分析论文、专家、
+AI帮助发现：
 
-机构和未来趋势。
+论文、
+专家、
+机构、
+趋势。
 
 </p>
 
@@ -386,11 +425,9 @@ AI帮助分析论文、专家、
 
 
 
-
 </main>
 
 
 )
-
 
 }
