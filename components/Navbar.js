@@ -6,23 +6,7 @@ export default function Navbar(){
 
 return (
 
-<nav
-style={{
-
-display:"flex",
-
-justifyContent:"space-between",
-
-alignItems:"center",
-
-padding:"20px 40px",
-
-background:"#ffffff",
-
-borderBottom:"1px solid #e5e7eb"
-
-}}
->
+<nav>
 
 
 <div>
@@ -45,17 +29,7 @@ LifeScience Intelligence
 
 
 
-<div
-
-style={{
-
-display:"flex",
-
-gap:"25px"
-
-}}
-
->
+<div className="nav-links">
 
 
 <Link href="/">
@@ -63,6 +37,7 @@ gap:"25px"
 首页
 
 </Link>
+
 
 
 <Link href="/research/stem-cell">
@@ -81,9 +56,17 @@ gap:"25px"
 
 
 
-<Link href="/">
+<Link href="/papers">
 
-最新研究
+论文库
+
+</Link>
+
+
+
+<Link href="/experts">
+
+专家库
 
 </Link>
 
@@ -104,6 +87,5 @@ AI Analyst
 
 
 )
-
 
 }
