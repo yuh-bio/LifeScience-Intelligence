@@ -1,145 +1,781 @@
+/* =================================
+   LifeScience Intelligence v2
+   Global Style System
+================================= */
+
+
+/* ---------- Reset ---------- */
+
+
+* {
+
+box-sizing:border-box;
+
+}
+
+
+
+html,
 body {
 
-  margin:0;
 
-  font-family:
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  "Microsoft YaHei",
-  sans-serif;
+margin:0;
 
-  background:#f8fafc;
+padding:0;
 
-  color:#111827;
+
+font-family:
+
+Inter,
+"Microsoft YaHei",
+Arial,
+sans-serif;
+
+
+background:#f6f9fc;
+
+
+color:#111827;
+
 
 }
 
 
 
-.container{
+a {
 
-  max-width:1200px;
+text-decoration:none;
 
-  margin:auto;
-
-  padding:60px 30px;
+color:inherit;
 
 }
 
 
 
-.header{
+img {
 
-  text-align:center;
-
-  padding:60px 0;
+max-width:100%;
 
 }
 
 
 
-.header h1{
 
-  font-size:48px;
 
-  font-weight:700;
+/* ---------- Layout ---------- */
 
-  letter-spacing:-1px;
+
+.container {
+
+
+max-width:1200px;
+
+
+margin:0 auto;
+
+
+padding:40px 24px;
+
 
 }
 
 
 
-.header p{
+section {
 
-  font-size:20px;
 
-  color:#64748b;
+margin-bottom:70px;
+
 
 }
 
 
 
-h2{
 
-  margin-top:60px;
 
-  font-size:32px;
+/* ---------- Navbar ---------- */
+
+
+nav {
+
+
+position:sticky;
+
+
+top:0;
+
+
+z-index:1000;
+
+
+display:flex;
+
+
+justify-content:space-between;
+
+
+align-items:center;
+
+
+padding:18px 40px;
+
+
+background:
+
+rgba(255,255,255,0.95);
+
+
+backdrop-filter:blur(10px);
+
+
+border-bottom:
+
+1px solid #e5e7eb;
+
 
 }
 
 
 
-.grid{
+nav h2 {
 
-  display:grid;
 
-  grid-template-columns:
+margin:0;
 
-  repeat(3,1fr);
 
-  gap:25px;
+font-size:24px;
+
+
+font-weight:700;
+
+
+color:#0f3d91;
+
 
 }
 
 
 
-.card{
 
-  background:white;
+.nav-links {
 
-  border-radius:20px;
 
-  padding:30px;
+display:flex;
 
-  box-shadow:
 
-  0 10px 30px rgba(0,0,0,0.05);
+gap:28px;
 
-  transition:0.3s;
+
+align-items:center;
+
 
 }
 
 
 
-.card:hover{
+.nav-links a {
 
-  transform:translateY(-5px);
+
+font-size:16px;
+
+
+color:#374151;
+
+
+transition:.2s;
+
 
 }
 
 
 
-.card h3{
+.nav-links a:hover {
 
-  font-size:22px;
+
+color:#2563eb;
+
 
 }
 
 
 
-.card p{
 
-  color:#64748b;
+
+/* ---------- Hero ---------- */
+
+
+.header {
+
+
+padding:
+
+80px 40px;
+
+
+text-align:center;
+
+
+border-radius:28px;
+
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#eaf3ff,
+
+#ffffff
+
+);
+
+
+margin-bottom:60px;
+
 
 }
 
 
 
-li{
+.header h1 {
 
-  margin:10px 0;
+
+font-size:56px;
+
+
+line-height:1.2;
+
+
+margin-bottom:20px;
+
+
+color:#0b3a82;
+
 
 }
 
 
-@media(max-width:900px){
 
-.grid{
+.header h2 {
 
-grid-template-columns:1fr;
+
+font-size:30px;
+
+
+font-weight:500;
+
+
+color:#1e40af;
+
 
 }
+
+
+
+.header p {
+
+
+font-size:20px;
+
+
+line-height:1.8;
+
+
+color:#4b5563;
+
+
+max-width:800px;
+
+
+margin:20px auto;
+
+
+}
+
+
+
+
+
+/* ---------- Titles ---------- */
+
+
+h1,
+h2,
+h3 {
+
+
+letter-spacing:-0.02em;
+
+
+}
+
+
+
+section h2 {
+
+
+font-size:34px;
+
+
+margin-bottom:30px;
+
+
+color:#0f3d91;
+
+
+}
+
+
+
+
+
+/* ---------- Grid ---------- */
+
+
+.grid {
+
+
+display:grid;
+
+
+grid-template-columns:
+
+
+repeat(
+
+auto-fit,
+
+minmax(260px,1fr)
+
+);
+
+
+gap:26px;
+
+
+}
+
+
+
+
+
+/* ---------- Card ---------- */
+
+
+.card {
+
+
+background:white;
+
+
+padding:30px;
+
+
+border-radius:22px;
+
+
+border:
+
+1px solid #e5e7eb;
+
+
+box-shadow:
+
+0 10px 30px
+
+rgba(
+
+15,
+
+61,
+
+145,
+
+0.08
+
+);
+
+
+transition:
+
+all .25s ease;
+
+
+}
+
+
+
+.card:hover {
+
+
+transform:
+
+translateY(-6px);
+
+
+box-shadow:
+
+0 18px 40px
+
+rgba(
+
+15,
+
+61,
+
+145,
+
+0.15
+
+);
+
+
+}
+
+
+
+.card h3 {
+
+
+font-size:22px;
+
+
+margin-bottom:15px;
+
+
+color:#123b82;
+
+
+}
+
+
+
+.card p {
+
+
+font-size:16px;
+
+
+line-height:1.8;
+
+
+color:#4b5563;
+
+
+}
+
+
+
+
+
+/* ---------- Metrics ---------- */
+
+
+.metric {
+
+
+text-align:center;
+
+
+}
+
+
+
+.metric h2 {
+
+
+font-size:42px;
+
+
+color:#2563eb;
+
+
+}
+
+
+
+.metric p {
+
+
+font-size:18px;
+
+
+}
+
+
+
+
+
+/* ---------- Buttons ---------- */
+
+
+button {
+
+
+background:#0f3d91;
+
+
+color:white;
+
+
+border:none;
+
+
+padding:
+
+12px 28px;
+
+
+border-radius:12px;
+
+
+font-size:16px;
+
+
+cursor:pointer;
+
+
+transition:.2s;
+
+
+}
+
+
+
+button:hover {
+
+
+background:#2563eb;
+
+
+}
+
+
+
+
+
+/* ---------- Inputs ---------- */
+
+
+input {
+
+
+width:100%;
+
+
+padding:16px;
+
+
+font-size:18px;
+
+
+border-radius:12px;
+
+
+border:
+
+1px solid #d1d5db;
+
+
+background:white;
+
+
+outline:none;
+
+
+}
+
+
+
+input:focus {
+
+
+border-color:#2563eb;
+
+
+box-shadow:
+
+0 0 0 3px
+
+rgba(
+
+37,
+
+99,
+
+235,
+
+0.15
+
+);
+
+
+}
+
+
+
+
+
+/* ---------- AI Analyst ---------- */
+
+
+.ai-result {
+
+
+margin-top:40px;
+
+
+}
+
+
+
+
+/* ---------- Research / Technology Pages ---------- */
+
+
+.header h3 {
+
+
+font-size:20px;
+
+
+color:#2563eb;
+
+
+font-weight:500;
+
+
+}
+
+
+
+
+
+/* ---------- Footer ---------- */
+
+
+footer {
+
+
+padding:40px;
+
+
+text-align:center;
+
+
+color:#6b7280;
+
+
+}
+
+
+
+
+
+/* ---------- Mobile ---------- */
+
+
+@media(max-width:768px){
+
+
+
+nav {
+
+
+flex-direction:column;
+
+
+gap:20px;
+
+
+padding:20px;
+
+
+}
+
+
+
+.nav-links {
+
+
+flex-wrap:wrap;
+
+
+justify-content:center;
+
+
+gap:15px;
+
+
+}
+
+
+
+.container {
+
+
+padding:
+
+20px;
+
+
+}
+
+
+
+.header {
+
+
+padding:
+
+50px 20px;
+
+
+}
+
+
+
+.header h1 {
+
+
+font-size:38px;
+
+
+}
+
+
+
+.header h2 {
+
+
+font-size:22px;
+
+
+}
+
+
+
+section h2 {
+
+
+font-size:26px;
+
+
+}
+
+
+
+.grid {
+
+
+grid-template-columns:
+
+1fr;
+
+
+}
+
+
 
 }
