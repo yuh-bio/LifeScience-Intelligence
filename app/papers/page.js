@@ -1,4 +1,7 @@
+import Link from "next/link";
+
 import {papers} from "../../data/papers";
+
 
 
 export default function Papers(){
@@ -17,12 +20,19 @@ Research Papers
 </h1>
 
 
+<h3>
+LifeScience Intelligence Literature Database
+</h3>
+
+
 <p>
-生命科学论文数据库
+生命科学论文智能数据库
 </p>
 
 
 </section>
+
+
 
 
 
@@ -37,52 +47,65 @@ Research Papers
 papers.map((paper,index)=>(
 
 
-<div
+<Link
 
-className="card"
+href={`/papers/${paper.slug}`}
 
 key={index}
 
 >
 
 
+<div className="card">
+
+
 <h3>
+
 {paper.title}
+
 </h3>
 
 
 <p>
+
 作者：
+
 {paper.authors}
+
 </p>
 
 
 <p>
+
 期刊：
+
 {paper.journal}
+
 </p>
 
 
 <p>
+
 年份：
+
 {paper.year}
+
 </p>
 
 
 <p>
-领域：
+
+研究方向：
+
 {paper.field}
+
 </p>
-
-
-<p>
-DOI：
-{paper.doi}
-</p>
-
 
 
 </div>
+
+
+</Link>
 
 
 ))
